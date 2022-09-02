@@ -50,7 +50,7 @@
                                             <td>{{ $row->jumlah_meter }} KWH</td>
                                             <td style="color:blue">Rp.{{ number_format($row->jumlah_meter * ($row->kode_tarif == 1 ? 1352 : 1467))}}</td>
                                             @if (Auth::user()->level=='admin')
-                                                <td><a href="/admin/confirm_status/{{ $row->id_tagihan }}" class="btn btn-{{ $row->status == 'belum_bayar' ? 'secondary' : 'success disabled'}} " onclick="return confirm('Apakah sudah bayar?')" >{{ $row->status }}</a></td>
+                                                <td><a href="/admin/confirm_status/{{ $row->id_tagihan }}" class="btn btn-{{ $row->status == 'belum_bayar' ? 'success' : 'secondary disabled'}} " onclick="return confirm('Apakah sudah bayar?')" >{{ $row->status }}</a></td>
                                             @endif
                                             @if (Auth::user()->level=='admin')
                                                 <td>
