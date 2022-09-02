@@ -201,7 +201,7 @@
               
           <p>________ Tagihan Bulan {{ $row->bulan }} Tahun {{ $row->tahun }} ________</p>
           <center>
-              <a href="/invoice/{{ $row->id }}/{{ $row->id_tagihan }}" class="p">
+              <a href="/invoice/{{ $row->id }}/{{ $row->id_tagihan }}" class="p" target="_blank">
                   <span></span>
                   <span></span>
                   <span></span>   
@@ -222,7 +222,7 @@
             @csrf
         </form>
 
-        <a href="/riwayat/{{ Auth::user()->id }}" class="btn btn-light float-right">Riwayat</a>
+        <a href="/riwayat/{{ Auth::user()->id }}" class="btn btn-light float-right" target="_blank">Riwayat</a>
     </div>
   
 </body>
